@@ -18,7 +18,22 @@ namespace wfaFractionsExercice
 
         public Fraction ReduireFraction(Fraction fractionAReduire)
         {
+            int pgcd = TrouverPGCD(fractionAReduire);
+            int num = fractionAReduire.Numerateur;
+            int denom = fractionAReduire.Denominateur;
+            Fraction fractionReduite;
 
+            if (pgcd != 1 )
+            {
+                num = Diviser(num, pgcd);
+                denom = Diviser(denom, pgcd);
+                fractionReduite = new Fraction(num, denom);
+                return fractionReduite;
+            }
+            else
+            {
+                return fractionAReduire;
+            }
         }
 
         private int TrouverPGCD(Fraction fraction)
@@ -38,6 +53,18 @@ namespace wfaFractionsExercice
                 }
             }
             return num;
+        }
+
+        private int Diviser(int dividende, int diviseur)
+        {
+            int quotient = 0;
+
+            while (dividende >= diviseur)
+            {
+                dividende = dividende - diviseur;
+                quotient++;
+            }
+            return quotient;
         }
     }
 }
