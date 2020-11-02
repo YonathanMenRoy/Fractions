@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace wfaFractionsExercice
 {
-    public partial class Form1 : Form
+    public partial class frmFractionsAvecSurcharge : Form
     {
-        public Form1()
+        public frmFractionsAvecSurcharge()
         {
             InitializeComponent();
+        }
+
+        private void frmFractionsAvecSurcharge_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
