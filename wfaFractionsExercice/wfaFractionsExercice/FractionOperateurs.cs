@@ -10,11 +10,12 @@ namespace wfaFractionsExercice
     {
         private static IList<Fraction> MettreSurMemeDenominateur(Fraction fraction1, Fraction fraction2)
         {
-            Fraction memoire = fraction1;
+            
+            int denomMemoire = fraction1.Denominateur;
             fraction1.Numerateur = fraction1.Numerateur * fraction2.Denominateur;
             fraction1.Denominateur = fraction1.Denominateur * fraction2.Denominateur;
-            fraction2.Numerateur = fraction2.Numerateur * memoire.Denominateur;
-            fraction2.Denominateur = fraction2.Denominateur * memoire.Denominateur;
+            fraction2.Numerateur = fraction2.Numerateur * denomMemoire;
+            fraction2.Denominateur = fraction2.Denominateur * denomMemoire;
             IList<Fraction> fractions = new List<Fraction>();
 
             fractions.Add(fraction1);

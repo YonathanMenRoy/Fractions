@@ -8,8 +8,8 @@ namespace wfaFractionsExercice
 {
     public partial class Fraction
     {
-        int Numerateur { get; set; }
-        int Denominateur { get; set; }
+        public int Numerateur { get; set; }
+        public int Denominateur { get; set; }
         public Fraction(int numerateur, int denominateur)
         {
             Numerateur = numerateur;
@@ -38,8 +38,8 @@ namespace wfaFractionsExercice
 
         private int TrouverPGCD(Fraction fraction)
         {
-            int num = fraction.Numerateur;
-            int denom = fraction.Denominateur;
+            int num = Math.Abs(fraction.Numerateur);
+            int denom = Math.Abs(fraction.Denominateur);
 
             while (num != denom)
             {
@@ -58,13 +58,22 @@ namespace wfaFractionsExercice
         private int Diviser(int dividende, int diviseur)
         {
             int quotient = 0;
+            int divid = Math.Abs(dividende);
 
-            while (dividende >= diviseur)
+            while (divid >= diviseur)
             {
-                dividende = dividende - diviseur;
+                divid = divid - diviseur;
                 quotient++;
             }
-            return quotient;
+            if (dividende<0)
+            {
+                return quotient*-1;
+            }
+            else
+            {
+                return quotient;
+            }
+            
         }
     }
 }

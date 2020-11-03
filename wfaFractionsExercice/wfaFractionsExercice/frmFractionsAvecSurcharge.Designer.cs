@@ -28,48 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtNumFraction1 = new System.Windows.Forms.TextBox();
+            this.txtDenomFraction1 = new System.Windows.Forms.TextBox();
+            this.txtNumFraction2 = new System.Windows.Forms.TextBox();
+            this.txtDenomFraction2 = new System.Windows.Forms.TextBox();
             this.lblLigne1 = new System.Windows.Forms.Label();
             this.lblLigne2 = new System.Windows.Forms.Label();
             this.btnAdditioner = new System.Windows.Forms.Button();
             this.btnSoustraire = new System.Windows.Forms.Button();
             this.btnMultiplier = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblLigne3 = new System.Windows.Forms.Label();
             this.lblResultat = new System.Windows.Forms.Label();
             this.lblNumReponse = new System.Windows.Forms.Label();
             this.lblDenomReponse = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtNumFraction1
             // 
-            this.textBox1.Location = new System.Drawing.Point(52, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(58, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtNumFraction1.Location = new System.Drawing.Point(52, 52);
+            this.txtNumFraction1.Name = "txtNumFraction1";
+            this.txtNumFraction1.Size = new System.Drawing.Size(58, 20);
+            this.txtNumFraction1.TabIndex = 0;
             // 
-            // textBox2
+            // txtDenomFraction1
             // 
-            this.textBox2.Location = new System.Drawing.Point(52, 104);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(58, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtDenomFraction1.Location = new System.Drawing.Point(52, 104);
+            this.txtDenomFraction1.Name = "txtDenomFraction1";
+            this.txtDenomFraction1.Size = new System.Drawing.Size(58, 20);
+            this.txtDenomFraction1.TabIndex = 1;
             // 
-            // textBox3
+            // txtNumFraction2
             // 
-            this.textBox3.Location = new System.Drawing.Point(334, 52);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(57, 20);
-            this.textBox3.TabIndex = 2;
+            this.txtNumFraction2.Location = new System.Drawing.Point(334, 52);
+            this.txtNumFraction2.Name = "txtNumFraction2";
+            this.txtNumFraction2.Size = new System.Drawing.Size(57, 20);
+            this.txtNumFraction2.TabIndex = 2;
             // 
-            // textBox4
+            // txtDenomFraction2
             // 
-            this.textBox4.Location = new System.Drawing.Point(334, 104);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(57, 20);
-            this.textBox4.TabIndex = 3;
+            this.txtDenomFraction2.Location = new System.Drawing.Point(334, 104);
+            this.txtDenomFraction2.Name = "txtDenomFraction2";
+            this.txtDenomFraction2.Size = new System.Drawing.Size(57, 20);
+            this.txtDenomFraction2.TabIndex = 3;
             // 
             // lblLigne1
             // 
@@ -97,6 +97,7 @@
             this.btnAdditioner.TabIndex = 6;
             this.btnAdditioner.Text = "Additionne";
             this.btnAdditioner.UseVisualStyleBackColor = true;
+            this.btnAdditioner.Click += new System.EventHandler(this.btnAdditioner_Click);
             // 
             // btnSoustraire
             // 
@@ -106,6 +107,7 @@
             this.btnSoustraire.TabIndex = 7;
             this.btnSoustraire.Text = "Soustraire";
             this.btnSoustraire.UseVisualStyleBackColor = true;
+            this.btnSoustraire.Click += new System.EventHandler(this.btnSoustraire_Click);
             // 
             // btnMultiplier
             // 
@@ -115,15 +117,16 @@
             this.btnMultiplier.TabIndex = 8;
             this.btnMultiplier.Text = "Multiplie";
             this.btnMultiplier.UseVisualStyleBackColor = true;
+            this.btnMultiplier.Click += new System.EventHandler(this.btnMultiplier_Click);
             // 
-            // label1
+            // lblLigne3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(185, 282);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "___________";
+            this.lblLigne3.AutoSize = true;
+            this.lblLigne3.Location = new System.Drawing.Point(185, 282);
+            this.lblLigne3.Name = "lblLigne3";
+            this.lblLigne3.Size = new System.Drawing.Size(73, 13);
+            this.lblLigne3.TabIndex = 11;
+            this.lblLigne3.Text = "___________";
             // 
             // lblResultat
             // 
@@ -160,16 +163,16 @@
             this.Controls.Add(this.lblDenomReponse);
             this.Controls.Add(this.lblNumReponse);
             this.Controls.Add(this.lblResultat);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblLigne3);
             this.Controls.Add(this.btnMultiplier);
             this.Controls.Add(this.btnSoustraire);
             this.Controls.Add(this.btnAdditioner);
             this.Controls.Add(this.lblLigne2);
             this.Controls.Add(this.lblLigne1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDenomFraction2);
+            this.Controls.Add(this.txtNumFraction2);
+            this.Controls.Add(this.txtDenomFraction1);
+            this.Controls.Add(this.txtNumFraction1);
             this.Name = "frmFractionsAvecSurcharge";
             this.Text = "Des fractions avec surcharge d\'opérateurs";
             this.Load += new System.EventHandler(this.frmFractionsAvecSurcharge_Load);
@@ -180,16 +183,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtNumFraction1;
+        private System.Windows.Forms.TextBox txtDenomFraction1;
+        private System.Windows.Forms.TextBox txtNumFraction2;
+        private System.Windows.Forms.TextBox txtDenomFraction2;
         private System.Windows.Forms.Label lblLigne1;
         private System.Windows.Forms.Label lblLigne2;
         private System.Windows.Forms.Button btnAdditioner;
         private System.Windows.Forms.Button btnSoustraire;
         private System.Windows.Forms.Button btnMultiplier;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLigne3;
         private System.Windows.Forms.Label lblResultat;
         private System.Windows.Forms.Label lblNumReponse;
         private System.Windows.Forms.Label lblDenomReponse;

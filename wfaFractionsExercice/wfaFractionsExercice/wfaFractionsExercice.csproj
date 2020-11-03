@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntreeInvalideException.cs" />
     <Compile Include="Fraction.cs" />
     <Compile Include="FractionOperateurs.cs" />
     <Compile Include="frmFractionsAvecSurcharge.cs">
